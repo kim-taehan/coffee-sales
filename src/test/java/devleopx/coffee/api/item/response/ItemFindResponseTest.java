@@ -12,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class ItemFindResponseTest {
 
 
-    @DisplayName("")
+    @DisplayName("`Item` 을 `ItemFindResponse` 데이터로 변환한다.")
     @Test
     void itemToItemFindResponse(){
         // given
