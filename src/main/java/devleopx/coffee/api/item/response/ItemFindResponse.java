@@ -6,7 +6,8 @@ import lombok.Builder;
 
 @Builder
 public record ItemFindResponse(Long itemId, String itemName, Integer price, ItemType itemType) {
-    public static ItemFindResponse from(Item item) {
+    public static ItemFindResponse of(Item item) {
+
         return ItemFindResponse.builder()
                 .itemId(item.getItemId())
                 .itemName(item.getItemName())
