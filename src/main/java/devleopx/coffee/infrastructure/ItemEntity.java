@@ -6,10 +6,12 @@ import devleopx.coffee.item.ItemType;
 import jakarta.persistence.*;
 import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Getter
-@Table(name = "orders")
+@Table(name = "items")
+@NoArgsConstructor
 public class ItemEntity {
 
     @Id
@@ -23,6 +25,14 @@ public class ItemEntity {
 
     private Integer price;
 
+    @Builder
+    public ItemEntity(Long id, String itemName, ItemType itemType, Integer price) {
+        this.id = id;
+        this.itemName = itemName;
+        this.itemType = itemType;
+        this.price = price;
+    }
+
     public Item convertItem() {
         return Item.builder()
                 .itemId(id)
@@ -30,14 +40,6 @@ public class ItemEntity {
                 .itemName(itemName)
                 .itemType(itemType)
                 .build();
-    }
-
-    @Builder
-    public ItemEntity(Long id, String itemName, ItemType itemType, Integer price) {
-        this.id = id;
-        this.itemName = itemName;
-        this.itemType = itemType;
-        this.price = price;
     }
 
     public static ItemEntity of(Item item) {

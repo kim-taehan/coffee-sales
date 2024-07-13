@@ -8,6 +8,4 @@ import java.util.List;
 
 @Repository
 public interface ItemJpaRepository extends JpaRepository<ItemEntity, Long> {
-
-
 }

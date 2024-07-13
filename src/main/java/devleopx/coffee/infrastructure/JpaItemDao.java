@@ -7,7 +7,6 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
-import java.util.Optional;
 
 @Component
 @RequiredArgsConstructor
@@ -17,7 +16,6 @@ public class JpaItemDao implements ItemDao {
 
     @Override
     public Item selectById(Long itemId) {
-
         ItemEntity itemEntity = this.findById(itemId);
         return itemEntity.convertItem();
     }
@@ -45,7 +43,6 @@ public class JpaItemDao implements ItemDao {
         ItemEntity itemEntity = this.findById(itemId);
         itemJpaRepository.delete(itemEntity);
     }
-
 
     private ItemEntity findById(Long itemId) {
         return itemJpaRepository.findById(itemId)
