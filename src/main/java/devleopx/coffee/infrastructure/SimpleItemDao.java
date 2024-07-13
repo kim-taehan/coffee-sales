@@ -2,7 +2,7 @@ package devleopx.coffee.infrastructure;
 
 import devleopx.coffee.item.Item;
 import devleopx.coffee.item.ItemType;
-import devleopx.coffee.item.service.ItemRepository;
+import devleopx.coffee.item.port.ItemDao;
 import org.springframework.stereotype.Component;
 
 import java.util.HashMap;
@@ -12,8 +12,7 @@ import java.util.Objects;
 import java.util.concurrent.atomic.AtomicLong;
 import java.util.function.Predicate;
 
-@Component
-public class SimpleItemRepository implements ItemRepository {
+public class SimpleItemDao implements ItemDao {
 
     Map<Long, Item> itemMap = new HashMap<>();
 
@@ -40,5 +39,15 @@ public class SimpleItemRepository implements ItemRepository {
         long itemId = sequence.getAndIncrement();
         itemMap.put(itemId, item);
         return itemId;
+    }
+
+    @Override
+    public void update(Long itemId, Item item) {
+
+    }
+
+    @Override
+    public void delete(Long itemId) {
+
     }
 }
