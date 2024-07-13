@@ -21,8 +21,8 @@ public class JpaItemDao implements ItemDao {
     }
 
     @Override
-    public List<Item> select(ItemType itemType, String itemName) {
-        return itemJpaRepository.findAll()
+    public List<Item> selectItems(ItemType itemType, String itemName) {
+        return itemJpaRepository.findItems(itemType, itemName)
                 .stream().map(ItemEntity::convertItem)
                 .toList();
     }

@@ -54,7 +54,7 @@ public class ItemServiceImpl implements ItemService {
 
     @Override
     public List<Item> findItems(ItemType itemType, String itemName) {
-        return itemDao.select(itemType, itemName);
+        return itemDao.selectItems(itemType, itemName);
     }
 
     @Override

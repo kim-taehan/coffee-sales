@@ -9,7 +9,7 @@ public interface ItemDao {
 
     Item selectById(Long itemId);
 
-    List<Item> select(ItemType itemType, String itemName);
+    List<Item> selectItems(ItemType itemType, String itemName);
 
     Long insert(Item item);
 

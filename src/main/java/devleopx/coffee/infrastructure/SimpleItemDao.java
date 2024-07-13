@@ -24,7 +24,7 @@ public class SimpleItemDao implements ItemDao {
     }
 
     @Override
-    public List<Item> select(ItemType itemType, String itemName) {
+    public List<Item> selectItems(ItemType itemType, String itemName) {
         return itemMap.values().stream()
                 .filter(checkItemCondition(itemType, itemName))
                 .toList();
