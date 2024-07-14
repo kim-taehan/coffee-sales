@@ -1,4 +1,4 @@
-package devleopx.coffee.infrastructure;
+package devleopx.coffee.infrastructure.item;
 
 
 import devleopx.coffee.item.Item;

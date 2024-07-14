@@ -1,12 +1,12 @@
-package devleopx.coffee.infrastructure;
+package devleopx.coffee.infrastructure.item;
 
-import com.querydsl.jpa.impl.JPAQuery;
-import devleopx.coffee.item.Item;
+import devleopx.coffee.infrastructure.Querydsl4RepositorySupport;
 import devleopx.coffee.item.ItemType;
 
 import java.util.List;
 
-import static devleopx.coffee.infrastructure.QItemEntity.*;
+import static devleopx.coffee.infrastructure.item.QItemEntity.itemEntity;
+
 
 public class ItemJpaRepositoryImpl extends Querydsl4RepositorySupport implements ItemQueryDslRepository {
 

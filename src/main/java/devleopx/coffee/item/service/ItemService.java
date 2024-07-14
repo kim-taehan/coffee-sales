@@ -13,8 +13,4 @@ public interface ItemService {
     List<Item> findItems(ItemType itemType, String itemName);
 
     Long create(Item item);
-
-    Long modify(Long itemId, Item item);
-
-    void remove(Long itemId);
 }

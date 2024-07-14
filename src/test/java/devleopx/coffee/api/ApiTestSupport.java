@@ -17,5 +17,5 @@ public class ApiTestSupport {
     @MockBean
     protected ItemService itemService;
 
-    private final ObjectMapper objectMapper = new ObjectMapper();
+    protected final ObjectMapper objectMapper = new ObjectMapper();
 }

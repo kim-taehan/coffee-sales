@@ -1,6 +1,6 @@
-package devleopx.coffee.infrastructure;
+package devleopx.coffee.infrastructure.item;
 
-import devleopx.coffee.item.Item;
+import devleopx.coffee.infrastructure.item.ItemEntity;
 import devleopx.coffee.item.ItemType;
 import org.springframework.stereotype.Repository;
 

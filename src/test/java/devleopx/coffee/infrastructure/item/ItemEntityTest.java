@@ -1,15 +1,14 @@
-package devleopx.coffee.infrastructure;
+package devleopx.coffee.infrastructure.item;
 
+import devleopx.coffee.infrastructure.item.ItemEntity;
 import devleopx.coffee.item.Item;
 import devleopx.coffee.item.ItemType;
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.util.UUID;
 
 import static org.assertj.core.api.Assertions.*;
-import static org.junit.jupiter.api.Assertions.*;
 
 class ItemEntityTest {
 
@@ -56,6 +55,7 @@ class ItemEntityTest {
     }
 
     @Test
+    @DisplayName("itemName, itemType, price 를 변경할 수 있다.")
     void update() {
 
         // given
