@@ -21,6 +21,7 @@ public class ItemEntity {
     @Column(unique = true)
     private String itemName;
 
+    @Enumerated(EnumType.STRING)
     private ItemType itemType;
 
     private Integer price;

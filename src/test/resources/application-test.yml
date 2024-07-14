@@ -3,6 +3,13 @@ spring:
     activate:
       on-profile: test
 
+  datasource:
+    url: jdbc:h2:mem:~/coffee_db
+    #url: jdbc:h2:tcp://localhost/~/lee-do
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+
   sql:
     init:
       mode: EMBEDDED
@@ -13,7 +20,7 @@ spring:
   jpa:
     defer-datasource-initialization: true
     hibernate:
-      ddl-auto: create
+      ddl-auto: update
     show-sql: true
     properties:
       hibernate:
