@@ -12,7 +12,7 @@ public class Order {
 
     private final Long orderId;
 
-    private final Long orderNo;
+    private final String  orderNo;
 
     private final OrderStatus status;
 

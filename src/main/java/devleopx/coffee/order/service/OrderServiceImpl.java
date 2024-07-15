@@ -3,6 +3,7 @@ package devleopx.coffee.order.service;
 import devleopx.coffee.item.Item;
 import devleopx.coffee.item.service.ItemService;
 import devleopx.coffee.order.DiscountPolicy;
+import devleopx.coffee.order.Order;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -10,8 +11,6 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Objects;
 import java.util.UUID;
-import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.ConcurrentMap;
 
 @Slf4j
 @Service
@@ -34,6 +33,11 @@ public class OrderServiceImpl implements OrderService {
         String orderNo = UUID.randomUUID().toString();
 
 
+        Order build = Order.builder()
+                .orderNo(orderNo)
+                .orderAmount(totalAmount)
+
+                .build();
 
     }
 }
