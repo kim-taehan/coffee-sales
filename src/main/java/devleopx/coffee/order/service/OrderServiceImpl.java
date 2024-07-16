@@ -32,11 +32,10 @@ public class OrderServiceImpl implements OrderService {
         int discount = discountPolicy.discount(totalAmount);
         String orderNo = UUID.randomUUID().toString();
 
-
         Order build = Order.builder()
+                .orderId(-1L)
                 .orderNo(orderNo)
                 .orderAmount(totalAmount)
-
                 .build();
 
     }
